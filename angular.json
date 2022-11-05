@@ -3,5 +3,39 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+    "EditableMarkdownSection": {
+      "projectType": "library",
+      "root": "projects/editable-markdown-section",
+      "sourceRoot": "projects/editable-markdown-section/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/editable-markdown-section/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/editable-markdown-section/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/editable-markdown-section/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/editable-markdown-section/src/test.ts",
+            "tsConfig": "projects/editable-markdown-section/tsconfig.spec.json",
+            "karmaConfig": "projects/editable-markdown-section/karma.conf.js"
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "analytics": "6240630c-eac7-4aa3-9304-1b0c078675e3"
   }
 }
