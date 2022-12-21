@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
-import { MarkdownerModule } from 'markdowner';
 import {EditableMarkdownSectionComponent} from './editable-markdown-section.component';
+import {MarkdownerModule} from "markdowner";
 
 @NgModule({
   declarations: [
